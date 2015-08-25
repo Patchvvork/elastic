@@ -1,4 +1,4 @@
-cluster.name: tuto-cluster
+cluster.name: <%= node["cluster-name"] %>
 http.cors.enabled: true
 http.cors.allow-origin: "*"
 
@@ -8,8 +8,8 @@ cloud.aws.region: eu-central-1
 discovery.zen.ping.multicast.enabled: false
 discovery.type: ec2
 discovery.ec2.groups: "tuto ELK stack"
-cloud.aws.access_key: "AKIAI2SJCN6NASASS6NA"
-cloud.aws.secret_key: "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"
+cloud.aws.access_key: <%= node["access-key"] %>
+cloud.aws.secret_key: <%= node["secret-key"] %>
 #discovery.ec2.tag.Name: "elasticsearch-nodes"
 
 #################### Elasticsearch Configuration Example #####################

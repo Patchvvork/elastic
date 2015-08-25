@@ -3,7 +3,7 @@
 # Modify the Elasticsearch yaml config file
 
 cookbook_file "/etc/elasticsearch/elasticsearch.yml" do
-	source "elasticsearch.yml"
+	source "elasticsearch.yml.erb"
 	mode "0644"
 end
 
